@@ -1,6 +1,12 @@
 # Calibration 
 
-This repository contains the `CalibrationFunctions.py` module, which provides a modular framework for preprocessing data, calibrating probabilistic classifiers, and evaluating model performance.
+This repository implements a comprehensive benchmarking framework for handling imbalanced binary classification problems and improving probability estimates through calibration. At its core is the `CalibrationFunctions.py` module, which offers a flexible, plug-and-play interface for:
+
+- **Preprocessing & sampling** (oversampling, undersampling, cost-sensitive splits)  
+- **Probabilistic calibration** (Platt scaling, isotonic regression, exponential, polynomial, histogram binning, BBQ, and more)  
+- **Performance evaluation** (discrimination metrics like ROC-AUC and precision/recall, plus calibration metrics like Brier score and calibration curves)
+
+Complementing this, the `Loop.ipynb` notebook walks through an end-to-end scenario: generating multiple imbalance and sampling configurations, fitting baseline and calibrated models, and systematically comparing their effectiveness. The primary aim of this study is to quantify how different combinations of imbalance-handling techniques and calibration methods interact, and to identify the conditions under which calibration yields the greatest benefit. 
 
 ## Table of Contents
 
