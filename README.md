@@ -1,5 +1,25 @@
-# Calibration
-Calibration methods applied to datasets featuring a highly imbalanced target variable.
+# Calibration 
+
+This repository contains the `CalibrationFunctions.py` module, which provides a modular framework for preprocessing data, calibrating probabilistic classifiers, and evaluating model performance.
+
+## Table of Contents
+
+* [Features](#features)
+* [Dependencies](#dependencies)
+* [License](#license)
+
+## Features
+
+* **DataPreprocessor** for loading, sampling, and splitting datasets into training, test, and calibration sets, with support for undersampling or custom imbalance ratios 
+* **Calibrator** wrapper for fitting and evaluating multiple calibration methods (isotonic, platt, exponential, polynomial, BBQ, Venn–Abers, histogram binning) and computing metrics such as ECE, Brier score, and log loss
+* **Individual Calibrators** (e.g., `ExponentialCalibration`, `PolynomialNonDecreasingCalibration`, `HistBinningCalibration`, `BBQCalibration`) for direct use in custom workflows
+* **ModelEvaluator** class for computing classification metrics, plotting confusion matrices, ROC curves, and precision–recall analyses
 
 
-This repository focuses on the problem of calibration in machine learning models, specifically in the challenging scenario of highly imbalanced target variables. The goal is to create a benchmarking framework for seven of the most well-known calibration methods, offering a structured comparison of their effectiveness in different data conditions. The project will begin with a detailed exploration of each method, defining their theoretical foundations and assessing their relevance in situations where class distributions are skewed. Evaluation metrics will be carefully selected to ensure a meaningful assessment of calibration performance, acknowledging that traditional metrics may not be well-suited for imbalanced datasets. To facilitate experimentation and ease of use, the repository will include three Python classes that allow for iterative testing across various data scenarios, such as varying sample sizes and degrees of imbalance. Through this systematic approach, the project aims to provide valuable insights for researchers and practitioners working with imbalanced classification problems, contributing to the broader understanding of how calibration impacts model performance in real-world settings.
+## Dependencies
+
+Listed in `requirements.txt`
+
+## License
+
+This project is licensed under the MIT License.
